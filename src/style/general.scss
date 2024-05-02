@@ -1,0 +1,51 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+h2 {
+  color: $primary-color;
+}
+
+// .banner {
+//   background-color: lightblue;
+//   padding: 50px;
+// }
+//
+// .banner h2 {
+//   color:  green;
+// }
+
+// .banner:hover {
+//   background-color: lightcoral;
+// }
+
+.banner {
+  background-color: lightblue;
+  padding: 50px;
+  @include flex(row, center, center);
+
+  h2 {
+    color: green;
+
+    span {
+    }
+  }
+
+  &:hover {
+    background-color: lightcoral;
+  }
+
+  @media screen and (max-width: 600px) {
+    background-color: lightgrey;
+  }
+}
+
